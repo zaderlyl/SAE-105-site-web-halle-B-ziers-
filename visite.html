@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerçants</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.1.2/dist/aframe-animation-component.min.js"></script>
+</head>
+
+<body class="body-v">
+
+    <header class="menu">
+        <nav>
+            <div class="menu__brand">
+                <a href="index.html" class="menu__logo" aria-label="Accueil">
+                    <img src="images/logo.png" alt="Logo Halles de Béziers" class="logo">
+                </a>
+                <a href="index.html" class="menu__title">Halles de Béziers</a>
+            </div>
+            <ul class="menu__nav">
+                <li><a href="visite.html" class="menu__link">Visite</a></li>
+                <li><a href="about.html" class="menu__link">À Propos</a></li>
+                <li><a href="commercants.html" class="menu__link">Commerçants</a></li>
+                <li><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+
+            <div class="menu__mobile__brand">
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- menu sidebar -->
+    <div class="mobile__menu" id="mobileMenu">
+        <button class="mobile__menu__close" id="closeMenu" aria-label="Fermer le menu">×</button>
+        <nav class="mobile__menu__nav">
+            <a href="visite.html" class="mobile__menu__link">Visite</a>
+            <a href="about.html" class="mobile__menu__link">À Propos</a>
+            <a href="commercants.html" class="mobile__menu__link">Commerçants</a>
+            <a href="contact.html" class="mobile__menu__link">Contact</a>
+        </nav>
+    </div>
+    <div class="mobile__menu__overlay" id="menuOverlay"></div>
+
+    <!-- SCÈNE 360 -->
+    <a-scene cursor="rayOrigin: mouse;">
+        <a-camera wasd-controls-enabled="false" look-controls></a-camera>
+        <a-sky src="images/photo/photo_36/hall_centre.jpg"></a-sky>
+
+        <!-- Sortie Droite -->
+        <a-sphere class="sortie_droite" position="-15 10 26.62" radius="2" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree_droite/entree_droite.html'">
+        </a-sphere>
+
+        <!-- Sortie Arrière -->
+        <a-sphere class="arriere" position="-80 5 -60" radius="2" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree/entree.html'">
+        </a-sphere>
+
+        <!-- Sortie Gauche -->
+        <a-sphere class="sortie_gauche" position="28 5 -35" radius="1.25" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree_gauche/entree_gauche.html'">
+        </a-sphere>
+
+        <!-- Entrée Marché -->
+        <a-sphere class="marchee_entree" position="10 3 10" radius="0.5" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/marchee_entree/marchee_entree.html'">
+        </a-sphere>
+
+        <!-- Textes -->
+        <a-entity class="1" position="-5 0.3 10" rotation="0 150 0"
+            text="value: Suivez ce chemin pour visiter la cathédrale Saint-Nazaire; width: 18; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="2" position="15 0.57 -19.12" rotation="0 -40 0"
+            text="value: Suivez ce chemin pour aller visiter le centre-ville; width: 22; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="3" position="10 0 10" rotation="0 230 0"
+            text="value: Suivez ce chemin pour visiter le marché; width: 18; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="4" position="-20 -2 -15" rotation="0 60 0"
+            text="value: Sortir; width: 25; align: center; color: #BBB">
+        </a-entity>
+
+    </a-scene>
+
+    <!-- Script placé en bas -->
+    <script src="script/scriptvisite.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerçants</title>
+    <link rel="stylesheet" href="style/stylevisite.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.1.2/dist/aframe-animation-component.min.js"></script>
+</head>
+
+<body>
+
+    <header class="menu">
+        <nav>
+            <div class="menu__brand">
+                <a href="index.html" class="menu__logo" aria-label="Accueil">
+                    <img src="images/logo.png" alt="Logo Halles de Béziers" class="logo">
+                </a>
+                <a href="index.html" class="menu__title">Halles de Béziers</a>
+            </div>
+            <ul class="menu__nav">
+                <li><a href="visite.html" class="menu__link">Visite</a></li>
+                <li><a href="about.html" class="menu__link">À Propos</a></li>
+                <li><a href="commercants.html" class="menu__link">Commerçants</a></li>
+                <li><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+
+            <div class="menu__mobile__brand">
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- menu sidebar -->
+    <div class="mobile__menu" id="mobileMenu">
+        <button class="mobile__menu__close" id="closeMenu" aria-label="Fermer le menu">×</button>
+        <nav class="mobile__menu__nav">
+            <a href="visite.html" class="mobile__menu__link">Visite</a>
+            <a href="about.html" class="mobile__menu__link">À Propos</a>
+            <a href="commercants.html" class="mobile__menu__link">Commerçants</a>
+            <a href="contact.html" class="mobile__menu__link">Contact</a>
+        </nav>
+    </div>
+    <div class="mobile__menu__overlay" id="menuOverlay"></div>
+
+    <!-- SCÈNE 360 -->
+    <a-scene cursor="rayOrigin: mouse;">
+        <a-camera wasd-controls-enabled="false" look-controls></a-camera>
+        <a-sky src="images/photo/photo_36/hall_centre.jpg"></a-sky>
+
+        <!-- Sortie Droite -->
+        <a-sphere class="sortie_droite" position="-15 10 26.62" radius="2" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree_droite/entree_droite.html'">
+        </a-sphere>
+
+        <!-- Sortie Arrière -->
+        <a-sphere class="arriere" position="-80 5 -60" radius="2" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree/entree.html'">
+        </a-sphere>
+
+        <!-- Sortie Gauche -->
+        <a-sphere class="sortie_gauche" position="28 5 -35" radius="1.25" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/entree_gauche/entree_gauche.html'">
+        </a-sphere>
+
+        <!-- Entrée Marché -->
+        <a-sphere class="marchee_entree" position="10 3 10" radius="0.5" color="#C70000"
+            animation__enter_color="property: material.color; type: color; to: #00FA43; dur: 300; startEvents: mouseenter"
+            animation__leave_color="property: material.color; type: color; to: #C70000; dur: 300; startEvents: mouseleave"
+            animation__enter_scale="property: scale; to: 1.7 1.7 1.7; dur: 300; startEvents: mouseenter"
+            animation__leave_scale="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
+            onclick="window.location.href='3D/marchee_entree/marchee_entree.html'">
+        </a-sphere>
+
+        <!-- Textes -->
+        <a-entity class="1" position="-5 0.3 10" rotation="0 150 0"
+            text="value: Suivez ce chemin pour visiter la cathédrale Saint-Nazaire; width: 18; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="2" position="15 0.57 -19.12" rotation="0 -40 0"
+            text="value: Suivez ce chemin pour aller visiter le centre-ville; width: 22; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="3" position="10 0 10" rotation="0 230 0"
+            text="value: Suivez ce chemin pour visiter le marché; width: 18; align: center; color: #BBB">
+        </a-entity>
+        <a-entity class="4" position="-20 -2 -15" rotation="0 60 0"
+            text="value: Sortir; width: 25; align: center; color: #BBB">
+        </a-entity>
+
+    </a-scene>
+
+    <!-- Script placé en bas -->
+    <script src="script/script.js"></script>
+
+</body>
+</html>

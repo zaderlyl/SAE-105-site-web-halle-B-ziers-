@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halles de Béziers - Accueil</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header class="menu">
+        <nav>
+            <div class="menu__brand">
+                <a href="index.html" class="menu__logo" aria-label="Accueil">
+                    <img src="images/logo.png" alt="Logo Halles de Béziers" class="logo">
+                </a>
+                <a href="index.html" class="menu__title">Halles de Béziers</a>
+            </div>
+
+            <ul class="menu__nav">
+                <li><a href="visite.html" class="menu__link">Visite</a></li>
+                <li><a href="about.html" class="menu__link">À Propos</a></li>
+                <li><a href="commercants.html" class="menu__link">Commerçants</a></li>
+                <li><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+
+            <div class="menu__mobile__brand">
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="scroll"></div>
+        <div class="interieur"></div>
+    </div>
+
+    <!-- menu sidebar -->
+    <div class="mobile__menu" id="mobileMenu">
+        <button class="mobile__menu__close" id="closeMenu" aria-label="Fermer le menu">×</button>
+        <nav class="mobile__menu__nav">
+            <a href="visite.html" class="mobile__menu__link">Visite</a>
+            <a href="about.html" class="mobile__menu__link">À Propos</a>
+            <a href="commercants.html" class="mobile__menu__link">Commerçants</a>
+            <a href="contact.html" class="mobile__menu__link">Contact</a>
+        </nav>
+    </div>
+
+    <div class="mobile__menu__overlay" id="menuOverlay"></div>
+
+    <div class="back__forme"></div>
+    <div class="back2"></div>
+
+    <div class="background__title"></div>
+
+    <div class="Text">
+        <div class="B_title">
+            <h1>Les Halles de Béziers</h1>
+        </div>
+        <div class="T_title">
+            <h2>Le plus beau marché français</h2>
+        </div>
+    </div>
+
+    <div class="separateur"></div>
+
+    <!-- Script placé en bas pour éviter les bugs -->
+    <script src="script/script.js"></script>
+
+</body>
+</html>
